@@ -1,0 +1,110 @@
+.logo{
+  height: 60px;
+  width: 100px;
+}
+
+.pageBackground{
+  background-position: center; 
+  
+  background-size: cover;
+  background-image: url("../img/background.jpg")
+}
+
+
+.navBar{
+	background-color: #7e8a88;
+	margin-bottom: 50px;
+}
+
+.titleContainer{
+	margin: 10px;
+	display: inline-block;
+}
+
+.titleBut{
+	margin: 10px;
+}
+
+.playerTitle{
+	margin:10px;
+}
+
+.verticalOffset{
+	margin-bottom: 10px;
+}
+
+
+.pageContainer{
+	display: flex;
+}
+
+.pageGameContainer{
+	display: block;
+}
+
+
+
+#blanket{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+}
+
+#timerPopup{
+    position:absolute;
+    left:50%;
+    bottom:50%;
+    background:#FFF;
+    width:200px;
+    height:200px;
+    margin:0 0 -100px -100px;
+    padding-top: 40px;
+    text-align:center;
+    box-shadow:0 2px 10px #000;
+}
+
+#confirmRequest{
+    position:absolute;
+    left:50%;
+    bottom:50%;
+    background:#FFF;
+    width:200px;
+    height:200px;
+    margin:0 0 -100px -100px;
+    padding-top: 40px;
+    text-align:center;
+    box-shadow:0 2px 10px #000;	
+}
+
+.gridBut{
+	height: 100px;
+	width: 100px;
+	margin:10px;
+}
+
+
+.gameLine{
+	display: flex;
+}
+
+.gameGrid{
+	display: block;
+}
+
+
+.playIcon{
+    font-size: 60px;
+}
+
+.caixatexto {
+  display: inline-block;
+  height: 300px;
+  padding: 5px;
+  border: 3px solid #000000;    
+  border-radius: 10px;
+  background: #E8E8E8;
+  
+}

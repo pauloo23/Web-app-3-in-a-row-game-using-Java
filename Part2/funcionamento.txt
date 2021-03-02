@@ -1,0 +1,20 @@
+Explicação:
+	registar utilizadores:
+		quando um utilizador faz log in é adicionado a lista de utilizadores, se cumprir as condições para ter um nome valido(ter um nome com mais de 3 caracteres, e nao ser um nome repetido)
+		quando um utilizador faz log out é retirado da lista de utilizadores do servidor
+		se um utilizador se regista na mesma sessão de outro utilizador, o utilizador anterior é retirado da lista de utilizadores porque a sua sessão fica terminada
+		a cada segundo, é consultada a lista de utilizadores do servidor para ver se esta mudou e assim sendo atualizar a lista no html do projeto
+	enviar pedidos de jogo:
+		ao submeter um pedido de jogo, o utilizador envia o pedido ao servidor que regista o novo jogo
+		a cada segundo, o cada sessao trata de verificar se tem pedidos de jogo pendentes, e se tiver avisa o jogador em questao para que este possa verificar ou rejeitar o pedido
+		se o utilizador que enviou o convite cancelar o jogo, isto deixa o proprio utilizador e o utilizador convidado livre, e portanto validos para aceitar ou enviar novos pedidos
+		se o utilizador que recebeu o pedido cancelar o jogo, ficam os dois da mesma forma, disponiveis para novos pedidos
+		se o tempo de pedido se esgotar, o pedido é tambem cancelado
+		por fim, se o utilizador convidado aceitar o pedido é iniciado o jogo, muda se a pagina html para a pagina de jogo e no url da pagina seguem informações relevantes :-> jogadorAtual, jogadorOponente, primeiro jogador
+	iniciar jogo:
+		o primeiro jogador é sempre o jogador que enviou o pedido, este joga com os X's durante o jogo
+		o segundo jogador nao pode efetuar uma jogada pois o jogo encontra se bloqueado para este
+		assim que o primeiro jogador realiza uma jogada esta é registada no servidor, e os estados dos dois jogadores sao atualizados
+		ao atualizar os estados muda se o estado de pronto a submeter jogada, para a espera de jogada, e vice versa
+		assim sendo, neste momento é o segundo jogador que pode submeter uma jogada e o primeiro tem o jogo bloqueado
+		assim que o jogo seja ganhou por algum dos jogadores, ou que todas as jogadas possiveis tenham sido executadas, o jogo termina e a pagina é reencaminhada para a pagina inicial

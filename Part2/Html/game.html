@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<title>Sistemas Distribuidos</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<script src="https://kit.fontawesome.com/8ce4d00fdb.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script  type="text/javascript" src="js/gameUpdater.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		<script src="sweetalert2.all.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	</head>
+
+	<body class="pageBackground">
+        
+        <div class="col-sm-12 navBar">
+        	
+        	<div class="col-sm-9 titleContainer">
+	        	<h1 class="titleText">
+					Sistemas Distribuídos - Projeto II <span id="curPlayerName"> </span>
+				</h1>
+        	</div>
+		</div>
+
+		<div class ="col-sm-12 pageGameContainer"> 
+		
+			<div class ="col-sm-12">
+				<div class="col-sm-11 offset-sm-1">
+						<h1 class="playerTitle"> 
+							Jogo atual: <span class="User" id="CurUsers"></span> 
+						</h1>
+				</div>
+			</div>
+
+			<div class="col-sm-12">	
+				<div class="col-sm-4 offset-sm-4 gameGrid">
+					
+					<div class="gameLine">
+						<div class="col-sm-4">
+							<button class="gridBut" id="A1" onclick="makePlay('A1')"></i></button>
+						</div>
+						<div class="col-sm-4">
+							<button class="gridBut" id="A2" onclick="makePlay('A2')"></button>
+						</div>
+						<div class="col-sm-4">
+							<button class="gridBut" id="A3" onclick="makePlay('A3')"></button>
+						</div>
+					</div>
+					
+					<div class="gameLine">
+						<div class="col-sm-4">
+							<button class="gridBut" id="B1" onclick="makePlay('B1')"></button>
+						</div>
+						<div class="col-sm-4">
+							<button class="gridBut" id="B2" onclick="makePlay('B2')"></button>
+						</div>
+						<div class="col-sm-4">
+							<button class="gridBut" id="B3" onclick="makePlay('B3')"></button>
+						</div>
+					</div>
+
+					<div class="gameLine">
+						<div class="col-sm-4">
+							<button class="gridBut" id="C1" onclick="makePlay('C1')"></button>
+						</div>
+						<div class="col-sm-4">
+							<button class="gridBut" id="C2" onclick="makePlay('C2')"></button>
+						</div>
+						<div class="col-sm-4">
+							<button class="gridBut" id="C3" onclick="makePlay('C3')"></button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+
+
+		</div>
+	</body>
+</html>

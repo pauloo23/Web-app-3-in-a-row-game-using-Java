@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<title>Sistemas Distribuidos</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script  type="text/javascript" src="js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		<script src="sweetalert2.all.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+	</head>
+
+	<body class="pageBackground">
+        
+        <div class="col-sm-12 navBar">
+        	
+        	<div class="col-sm-9 titleContainer">
+        	
+	        	<h1 class="titleText">
+	        	<img src="img/logo.jpg" class="logo ">	
+					Sistemas Distribuídos - Java RMI
+					
+				</h1>
+        	</div>
+
+        	<div class="col-sm-2 titleContainer">
+        	
+				<a id="logOutBut" class="btn btn-dark btn-lg titleBut offset-sm-11" onclick="logOut()">
+	  				Logout 
+	  			</a>
+        	</div>
+		
+		</div>
+
+		<div class ="col-sm-12 pageContainer"> 
+		
+			<div class="col-sm-6">
+				<div class ="offset-sm-2">
+					<h1 class="playerTitle"> 
+						Jogador atual: <span class="User" id="CurUser"></span> 
+					</h1>
+
+					<h3 class="playerTitle">
+						Entrar como outro jogador
+					</h3>
+					
+					<div class="col-sm-12">
+						<input  type="text" class="col-sm-6 verticalOffset" id="input"/>
+						<select class="selectType col-sm-3  verticalOffset" id="typeSelect">
+						    <option value="Aluno">Aluno</option>
+						    <option value="Professor">Professor</option>
+						    <option value="Outro">Outro</option>
+						</select>
+					</div>
+					
+					<div class="col-sm-12">
+						<input id="logInBut" type="button" value="Log In" class="col-sm-6  verticalOffset" onclick="logIn()"/>
+					</div>
+					
+				</div>
+
+			</div>
+
+			<div class="col-sm-6">		
+				<select class ="offset-sm-3 col-sm-6 verticalOffset caixatexto" id="userList" size="15">
+					
+				</select>
+			
+			<a id="sendGameBut" class="offset-sm-4 col-sm-4 btn btn-success btn-lg" onclick="sendGame()">
+  				Enviar Convite 
+  			</a>
+
+			</div>
+		</div>
+		
+		<div id="blanket" class="row"></div>
+		<div id="timerPopup"> 
+			<p>
+				A espera de resposta
+			</p>
+			<p id="timerCount">
+				
+			</p>
+			
+			<a class="btn btn-danger btn-lg" onclick="cancelRequest()">
+  				Cancelar 
+  			</a>
+
+		</div>
+
+		<div id="confirmRequest"> 
+			<p>
+				Recebeu um pedido de: <span id="requestPlayer"></span>
+			</p>
+			
+			<a class="btn btn-success btn-lg" onclick="acceptInvite()">
+  				Confirmar 
+  			</a>
+
+			<a class="btn btn-danger btn-lg" onclick="cancelInvite()">
+  				Cancelar 
+  			</a>
+
+		</div>
+
+
+		
+
+
+	</body>
+</html>
